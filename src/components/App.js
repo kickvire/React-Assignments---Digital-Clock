@@ -14,9 +14,10 @@ class App extends Component {
     );
   }
   componentDidMount() {
+    const oneSecond = 1000;
     this.intervalId = setInterval(() => {
-      this.setState = { date: new Date() };
-    }, 1000);
+      this.setState({ date: new Date() });
+    }, oneSecond);
   }
   componentWillUnmount() {
     clearInterval(this.intervalId);
